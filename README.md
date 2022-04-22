@@ -58,6 +58,10 @@ Solr Tutorial for beginners
 
 	type="string", uninvertible="false", docValues="true", indexed="false", stored="false" 
 
+   9.quantity
+	
+	type="pint" uninvertible="false" docValues="false" indexed="false" stored="false" required="false"
+
 9. Preparing JSON data
 
 	example-

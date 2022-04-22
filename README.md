@@ -57,5 +57,25 @@ Solr Tutorial for beginners
     8.summary - 
 
 	type="string", uninvertible="false", docValues="true", indexed="false", stored="false" 
+
+9. Preparing JSON data
+
+	example-
+
+	{
+		"id":"bookid"
+		"title":"The Subtle Art Of Not Giving a "
+		"author":"Mark Mason"
+		"genre":"Self-help"
+		"date":"1972-05-20T17:33:18Z"
+		"price":43
+		"inStock":"true"
+		"type":"Paperback"
+		"summary":"The Subtle Art of Not Giving a F*ck is a book that challenges the conventions of self-help by inviting the reader to NOT try, say no often 			and embrace negative thinking. Not giving a f*ck is about being comfortable with being different and caring about something more important 			than adversity."
+	}
+
+10. Run JSON queries from Postman.
+	
+
     
 

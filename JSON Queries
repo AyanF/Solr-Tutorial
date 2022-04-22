@@ -1,0 +1,56 @@
+1. Show All	
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header":false
+    },
+    "query": "*:*",
+}
+
+
+2. Search by exact title 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header":false
+    },
+    "query": "title:The\\ Subtle\\ Art\\ Of\\ Not\\ Giving\\ a\\ ",
+}
+
+3. Sort ascending by date
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "sort": "date asc"
+}
+
+4. Wildcard search by title and sort by date descending
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "title:Harry\\ Potter\\ *",
+    "sort":"date desc"
+}
+
+5. Group by author
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*"
+}
+
+  

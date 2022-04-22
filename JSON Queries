@@ -53,4 +53,99 @@
     "query": "*:*"
 }
 
+6.Group by author and return titles only 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*",
+    "fields":"title"
+}
+
+7. Faceting genres (displaying facet result only)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "limit":0,
+    "facet": {
+        "categories": {
+            "field": "genre"
+        }
+    }
+}
+
+8. Titles of Books under 30$ 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"price:[* TO 30]",
+    "fields":"title",
+    "limit":100
+}
+
+9. Books by J.K. Rowling from 10$ to 30$
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"price:[10 TO 30] AND author:J.K.\\ Rowling",  
+    "fields":"title",
+    "limit":100
+}	
+
+10. Books by any two authors (OR query)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"author:J.K.\\ Rowling OR author:Dan\\ Brown",  
+    "fields":"title",
+    "limit":100
+}
+
+11. Books out of stock
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "inStock:false",
+    "fields":"title",
+    "limit":100
+}
+
+12.Harry Potter books which are in stock and under 30$ (AND query)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "title:Harry\\ Potter\\ *",
+    "filter":"inStock:true AND price:[* TO 30]",
+    "fields":"title",
+    "limit":100
+}
+
+ 
+
   

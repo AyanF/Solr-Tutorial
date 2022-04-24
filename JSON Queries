@@ -146,6 +146,138 @@
     "limit":100
 }
 
+13. Fetch summary of given title
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "title:Angels\\ and\\ Demons",
+    "fields":"summary",
+    "limit":100
+}
+
+14. Books with publish date 1960 to 1982.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[1960-07-17T00:00:00Z TO 1982-07-17T00:00:00Z]"
+} 
+
+15. Books published before 1980 grouped by author
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[* TO 1990-07-17T00:00:00Z]"
+}
+
+16. Books published after 1990 and are under 50$ with type paperback (AND + date)  
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[1990-07-17T00:00:00Z TO * ] AND price:[* TO 50] AND type:Hardcover"
+}
+
+17. Term Facet authors with a minimum count of 3 books.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "min count of 3":{
+            "field":"author",
+            "type":"terms",
+            "mincount":3
+        }
+    }
+}
+
+18. Term facet on genre using prefix "Fic"
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "genres":{
+            "field":"genre",
+            "type":"terms",
+            "prefix":"Fic"
+        }
+    }
+} 
+
+19. Query facet to find count of books under 30$
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "Under 30":{
+            "field":"price",
+            "type":"query",
+            "q":"price:[* TO 30]"
+        }
+    }
+} 
+
+20. Range facet on price starts with 0, ends at 60 with gap of 10.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "price":{
+            "field":"price",
+            "type":"range",
+            "start":0,
+            "end":60,
+            "gap":"10"
+        }
+    }
+}  
+
+
+
+
+
  
 
   

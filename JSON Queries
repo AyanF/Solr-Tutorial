@@ -1,0 +1,283 @@
+1. Show All	
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header":false
+    },
+    "query": "*:*",
+}
+
+
+2. Search by exact title 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header":false
+    },
+    "query": "title:The\\ Subtle\\ Art\\ Of\\ Not\\ Giving\\ a\\ ",
+}
+
+3. Sort ascending by date
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "sort": "date asc"
+}
+
+4. Wildcard search by title and sort by date descending
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "title:Harry\\ Potter\\ *",
+    "sort":"date desc"
+}
+
+5. Group by author
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*"
+}
+
+6.Group by author and return titles only 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*",
+    "fields":"title"
+}
+
+7. Faceting genres (displaying facet result only)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "limit":0,
+    "facet": {
+        "categories": {
+            "field": "genre"
+        }
+    }
+}
+
+8. Titles of Books under 30$ 
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"price:[* TO 30]",
+    "fields":"title",
+    "limit":100
+}
+
+9. Books by J.K. Rowling from 10$ to 30$
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"price:[10 TO 30] AND author:J.K.\\ Rowling",  
+    "fields":"title",
+    "limit":100
+}	
+
+10. Books by any two authors (OR query)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "*:*",
+    "filter":"author:J.K.\\ Rowling OR author:Dan\\ Brown",  
+    "fields":"title",
+    "limit":100
+}
+
+11. Books out of stock
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "inStock:false",
+    "fields":"title",
+    "limit":100
+}
+
+12.Harry Potter books which are in stock and under 30$ (AND query)
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+    },
+    "query": "title:Harry\\ Potter\\ *",
+    "filter":"inStock:true AND price:[* TO 30]",
+    "fields":"title",
+    "limit":100
+}
+
+13. Fetch summary of given title
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "title:Angels\\ and\\ Demons",
+    "fields":"summary",
+    "limit":100
+}
+
+14. Books with publish date 1960 to 1982.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[1960-07-17T00:00:00Z TO 1982-07-17T00:00:00Z]"
+} 
+
+15. Books published before 1980 grouped by author
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false,
+        "group":true,
+        "group.field":"author"
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[* TO 1990-07-17T00:00:00Z]"
+}
+
+16. Books published after 1990 and are under 50$ with type paperback (AND + date)  
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "filter":"date:[1990-07-17T00:00:00Z TO * ] AND price:[* TO 50] AND type:Hardcover"
+}
+
+17. Term Facet authors with a minimum count of 3 books.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "min count of 3":{
+            "field":"author",
+            "type":"terms",
+            "mincount":3
+        }
+    }
+}
+
+18. Term facet on genre using prefix "Fic"
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "genres":{
+            "field":"genre",
+            "type":"terms",
+            "prefix":"Fic"
+        }
+    }
+} 
+
+19. Query facet to find count of books under 30$
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "Under 30":{
+            "field":"price",
+            "type":"query",
+            "q":"price:[* TO 30]"
+        }
+    }
+} 
+
+20. Range facet on price starts with 0, ends at 60 with gap of 10.
+
+{
+    "params": {
+        "wt": "JSON",
+        "csv.header": false
+    },
+    "query": "*:*",
+    "fields":"title",
+    "limit":0,
+    "facet":{
+        "price":{
+            "field":"price",
+            "type":"range",
+            "start":0,
+            "end":60,
+            "gap":"10"
+        }
+    }
+}  
+
+
+
+
+
+ 
+
+  

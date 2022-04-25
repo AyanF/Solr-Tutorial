@@ -1,0 +1,150 @@
+<delete><query>*:*</query></delete>
+
+
+{
+"id":"book1"
+"title":"The Subtle Art Of Not Giving a "
+"author":"Mark Mason"
+"genre":"Self-help"
+"date":"1972-05-20T17:33:18Z"
+"price":43
+"inStock":"true"
+"type":"Paperback"
+"quantity":100
+"summary":"The Subtle Art of Not Giving a F*ck is a book that challenges the conventions of self-help by inviting the reader to NOT try, say no often and embrace negative thinking. Not giving a f*ck is about being comfortable with being different and caring about something more important than adversity."
+},
+{
+"id":"book2"
+"title":"Angels and Demons"
+"author":"Dan Brown"
+"genre":["Fiction", "Mystery","Suspense" ,"Crime"]
+"date":"1982-06-20T17:33:18Z"
+"price":15
+"inStock":false
+"type":"Hardcover"
+"quantity":100
+"summary":"When Harvard symbologist Robert Langdon discovers the resurgence of an ancient brotherhood known as the Illuminati, he flies to Rome to warn the Vatican, the Illuminati's most hated enemy. Joining forces with beautiful Italian scientist Vittoria Vetra (Ayelet Zurer), Langdon follows a centuries-old trail of ancient symbols in the hope of preventing the Illuminati's deadly plot against the Roman Catholic Church from coming to fruition."
+},
+{
+"id":"book3"
+"title":"Harry Potter The Philosopher's Stone"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural", "Fantasy"]
+"date":"1983-07-20T17:33:18Z"
+"price":17.35
+"type":"Hardcover"
+"quantity":100
+"summary":"Adaptation of the first of J.K. Rowling's popular children's novels about Harry Potter, a boy who learns on his eleventh birthday that he is the orphaned son of two powerful wizards and possesses unique magical powers of his own. He is summoned from his life as an unwanted child to become a student at Hogwarts, an English boarding school for wizards. There, he meets several friends who become his closest allies and help him discover the truth about his parents' mysterious deaths."
+},
+{
+"id":"book4"
+"title":"Harry Potter The Chamber Of Secrets"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural","Fantasy"]
+"date":"1984-05-20T17:33:18Z"
+"price":18.50
+"type":"Hardcover"
+"quantity":100
+"summary": "The second instalment of boy wizard Harry Potter's adventures at Hogwarts School of Witchcraft and Wizardry, based on the novel by JK Rowling. A mysterious elf tells Harry to expect trouble during his second year at Hogwarts, but nothing can prepare him for trees that fight back, flying cars, spiders that talk and deadly warnings written in blood on the walls of the school."
+},
+{
+"id":"book5"
+"title":"Harry Potter The Prisioner Of Azkaban"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural", "Fantasy"]
+"date":"1985-07-20T17:33:18Z"
+"price":21.25
+"type":"Hardcover"
+"quantity":100
+"summary": "The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry. Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban, the wizard prison, believed to be one of Lord Voldemort's old allies."
+},
+{
+"id":"book6"
+"title":"Harry Potter The Goblet Of Fire"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural","Fantasy"]
+"date":"1986-08-20T17:33:18Z"
+"price":22
+"type":"Hardcover"
+"quantity":100
+"summary": "The fourth movie in the Harry Potter franchise sees Harry (Daniel Radcliffe) returning for his fourth year at Hogwarts School of Witchcraft and Wizardry, along with his friends, Ron (Rupert Grint) and Hermione (Emma Watson). There is an upcoming tournament between the three major schools of magic, with one participant selected from each school by the Goblet of Fire. When Harry's name is drawn, even though he is not eligible and is a fourth player, he must compete in the dangerous contest."
+
+},
+{
+"id":"book7"
+"title":"Harry Potter Order Of The Phoenix"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural","Fantasy"]
+"date":"1990-05-20T17:33:18Z"
+"price":25
+"type":"Hardcover"
+"quantity":100
+"summary":"Now in his fifth year at Hogwarts, Harry (Daniel Radcliffe) learns that many in the wizarding community do not know the truth of his encounter with Lord Voldemort. Cornelius Fudge, minister of Magic, appoints his toady, Dolores Umbridge, as Defense Against the Dark Arts teacher, for he fears that professor Dumbledore will take his job. But her teaching is deficient and her methods, cruel, so Harry prepares a group of students to defend the school against a rising tide of evil."
+},
+{
+"id":"book8"
+"title":"Harry Potter The Half Blood Prince"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural","Fantasy"]
+"date":"1992-05-20T17:33:18Z"
+"price":28
+"type":"Hardcover"
+"quantity":100
+"summary":"As Death Eaters wreak havoc in both Muggle and Wizard worlds, Hogwarts is no longer a safe haven for students. Though Harry (Daniel Radcliffe) suspects there are new dangers lurking within the castle walls, Dumbledore is more intent than ever on preparing the young wizard for the final battle with Voldemort. Meanwhile, teenage hormones run rampant through Hogwarts, presenting a different sort of danger. Love may be in the air, but tragedy looms, and Hogwarts may never be the same again."
+},
+{
+"id":"book9"
+"title":"Harry Potter The Deathly Hallows"
+"author":"J.K. Rowling"
+"genre":["Fiction","Supernatural","Fantasy"]
+"date":"1994-05-20T17:33:18Z"
+"price":30.99
+"type":"Hardcover"
+"quantity":100
+"summary":"Without the guidance and protection of their professors, Harry (Daniel Radcliffe), Ron (Rupert Grint) and Hermione (Emma Watson) begin a mission to destroy the Horcruxes, the sources of Voldemort's immortality. Though they must rely on one another more than ever, dark forces threaten to tear them apart. Voldemort's Death Eaters have seized control of the Ministry of Magic and Hogwarts, and they are searching for Harry -- even as he and his friends prepare for the ultimate showdown."
+},
+{
+"id":"book10"
+"title":"Rich Dad Poor Dad"
+"author":"Robert Kiyosaki"
+"genre":["Non-Fiction","Personal Finance"]
+"date":"1984-06-20T17:33:18Z"
+"price":38
+"type":"Paperback"
+"quantity":100
+"summary":" Rich Dad Poor Dad is about Robert Kiyosaki (author) and his two dads—his real father (poor dad) and the father of his best friend (rich dad)—and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you do not need to earn a high income to become rich."
+},
+{
+"id":"book11"
+"title":"Mathematics for Class 12th"
+"author":"R.D. Sharma"
+"genre":["Maths","Educational"]
+"date":"1996-05-20T17:33:18Z"
+"price":58
+"type":"Hardcover"
+"quantity":100
+"summary":" RD Sharma Solutions are focused on learning various Mathematics tricks and shortcuts for quick and easy calculations. Download the RD Sharma Solutions for Class 12 Maths now and practise all the CBSE Textbook questions. Solving these questions will ensure that students have a good practice of all types of questions that can be framed in the examination."
+},
+{
+"id":"book12"
+"title":"Diary Of A Young Girl"
+"author":"Anne Frank"
+"genre":["Autobiography","Non-Fiction"]
+"date":"1952-05-20T17:33:18Z"
+"price":27
+"type":"Paperback"
+"quantity":100
+"summary":"It tells the story of her family who live in Frankfurt, Germany and suddenly have to go into hiding as a result of Hitler and the Nazi Party's treatment of Jews in Europe during the second world war. They escape to Amsterdam where they go into hiding with other Jews. The diary ends suddenly on 1 August 1944."
+},
+{
+"id":"book13"
+"title":"Gulliver's Travels"
+"author":"Jonathan Swift "
+"genre":["Fiction","Satire","Fantasy"]
+"date":"1993-05-20T17:33:18Z"
+"price":22
+"type":"Hardcover"
+"quantity":100
+"summary":"Gulliver's Travels is an adventure story (in reality, a misadventure story) involving several voyages of Lemuel Gulliver, a ship's surgeon, who, because of a series of mishaps en route to recognized ports, ends up, instead, on several unknown islands living with people and animals of unusual sizes, behaviors, and philosophies"
+}
+
